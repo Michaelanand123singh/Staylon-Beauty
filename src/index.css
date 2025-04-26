@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-poppins text-dark bg-light;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-playfair font-bold;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  a {
+    @apply transition-colors duration-300;
+  }
+}
+
+/* Custom components */
+@layer components {
+  .btn {
+    @apply inline-block px-6 py-3 rounded-md font-medium transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+  
+  .section-padding {
+    @apply py-12 md:py-20 lg:py-24;
+  }
+  
+  .service-card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-2;
+  }
+  
+  .testimonial-card {
+    @apply bg-white p-6 rounded-lg shadow-sm relative;
+  }
+  
+  .testimonial-card::before {
+    content: '"';
+    @apply absolute -top-4 -left-4 text-6xl text-primary opacity-20;
+  }
+}
+
+/* Custom animations */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
