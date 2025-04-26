@@ -1,16 +1,16 @@
-import { useState } from 'react'
-import Lightbox from 'react-image-lightbox'
-import 'react-image-lightbox/style.css'
+import { useState } from 'react';
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 
 const Gallery = () => {
   const images = [
     '/assets/images/gallery1.jpg',
     '/assets/images/gallery2.jpg',
     // Add more images...
-  ]
+  ];
 
-  const [isOpen, setIsOpen] = useState(false)
-  const [photoIndex, setPhotoIndex] = useState(0)
+  const [isOpen, setIsOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
 
   return (
     <div className="py-20">
@@ -28,8 +28,8 @@ const Gallery = () => {
               key={index} 
               className="cursor-pointer overflow-hidden rounded-lg"
               onClick={() => {
-                setPhotoIndex(index)
-                setIsOpen(true)
+                setPhotoIndex(index);
+                setIsOpen(true);
               }}
             >
               <img 
@@ -43,21 +43,18 @@ const Gallery = () => {
 
         {isOpen && (
           <Lightbox
-            mainSrc={images[photoIndex]}
-            nextSrc={images[(photoIndex + 1) % images.length]}
-            prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-            onCloseRequest={() => setIsOpen(false)}
-            onMovePrevRequest={() =>
-              setPhotoIndex((photoIndex + images.length - 1) % images.length)
-            }
-            onMoveNextRequest={() =>
-              setPhotoIndex((photoIndex + 1) % images.length)
-            }
+            open={isOpen}
+            close={() => setIsOpen(false)}
+            index={photoIndex}
+            slides={images.map(src => ({ src }))}
+            on={{
+              view: ({ index }) => setPhotoIndex(index)
+            }}
           />
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Gallery
+export default Gallery;
