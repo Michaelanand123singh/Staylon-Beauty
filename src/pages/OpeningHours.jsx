@@ -13,7 +13,7 @@ const OpeningHours = () => {
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/2 mb-8 md:mb-0">
                 <img 
-                  src="/assets/images/opening-hours.jpg" 
+                  src="/banner/carousel-1.jpg" 
                   alt="Salon Interior"
                   className="rounded-lg w-full"
                 />
