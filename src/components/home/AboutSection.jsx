@@ -12,25 +12,25 @@ const AboutSection = () => {
               <div>
                 <h2 className="text-sm uppercase tracking-wider text-rose-500 font-semibold mb-2">About Us</h2>
                 <h3 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
-                  Staylon Beauty Parlour, <span className="block mt-1">Known for Our Services</span>
+                  Shringar.kay Beauty Parlour, <span className="block mt-1">Known for Our Services</span>
                 </h3>
               </div>
               
               <p className="text-gray-600 text-lg leading-relaxed">
-                A beauty parlour, also known as a salon or spa, is a business that offers a 
-                range of beauty and wellness services. It is a place where individuals can enhance their 
-                appearance, relax, and indulge in treatments for skin, hair, nails, and well-being.
+                At Shringar.kay, we specialize in premium nail services designed to enhance your natural beauty. 
+                Our skilled technicians deliver flawless results using high-quality products for a luxurious 
+                salon experience that leaves you feeling refreshed and confident.
               </p>
               
               <div className="flex flex-wrap gap-8 md:gap-12 mt-6">
                 <div className="flex flex-col">
-                  <span className="text-4xl font-bold text-rose-600">99</span>
-                  <span className="text-gray-700 font-medium mt-1">Beauty Specialists</span>
+                  <span className="text-4xl font-bold text-rose-600">6+</span>
+                  <span className="text-gray-700 font-medium mt-1">Signature Services</span>
                 </div>
                 
                 <div className="flex flex-col">
-                  <span className="text-4xl font-bold text-rose-600">9999</span>
-                  <span className="text-gray-700 font-medium mt-1">Happy Clients</span>
+                  <span className="text-4xl font-bold text-rose-600">100%</span>
+                  <span className="text-gray-700 font-medium mt-1">Satisfaction</span>
                 </div>
               </div>
               
@@ -43,8 +43,8 @@ const AboutSection = () => {
             <div className="relative">
               <div className="aspect-w-4 aspect-h-5 rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/about-us.jpg" 
-                  alt="Staylon Beauty Parlour" 
+                  src="/banner/gum-gel.jpg" 
+                  alt="Shringar.kay Beauty Parlour" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -58,8 +58,8 @@ const AboutSection = () => {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-gray-800 font-semibold">Premium Quality</p>
-                    <p className="text-gray-600 text-sm">100% Satisfaction</p>
+                    <p className="text-gray-800 font-semibold">Signature Nail Services</p>
+                    <p className="text-gray-600 text-sm">Luxury for your hands</p>
                   </div>
                 </div>
               </div>

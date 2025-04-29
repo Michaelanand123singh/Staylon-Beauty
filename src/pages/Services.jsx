@@ -4,51 +4,51 @@ import { Scissors, Star, Heart } from "lucide-react";
 const Services = () => {
   const nailServices = [
     {
-      title: "Gel Nails",
-      price: "₹3,500",
-      description: "Long-lasting gel polish for a flawless finish.",
+      title: "Gel Polish Application",
+      price: "₹550",
+      description: "A flawless coat of high-gloss color, perfect for every occasion.",
+      duration: 45,
+      image: "url_to_image_of_gel_polish",
+      isNew: false,
+    },
+    {
+      title: "Structured Manicure (BIAB)",
+      price: "₹750",
+      description: "Strengthen and enhance your natural nails with our premium builder base.",
       duration: 60,
-      image: "url_to_image_of_gel_nails",
-      isNew: false,
+      image: "url_to_image_of_structured_manicure",
+      isNew: true,
     },
     {
-      title: "Shellac Nails for Hands",
-      price: "₹1,500",
-      description: "Chip-resistant and high-gloss nail color.",
+      title: "Temporary Nails",
+      price: "₹800",
+      description: "The ideal choice for a short-term, stunning transformation.",
       duration: 45,
-      image: "url_to_image_of_shellac_nails",
+      image: "url_to_image_of_temporary_nails",
       isNew: false,
     },
     {
-      title: "Manicure",
-      price: "₹1,200",
-      description: "Classic nail care with shaping and polish.",
-      duration: 30,
-      image: "url_to_image_of_manicure",
+      title: "Soft Gel Extensions",
+      price: "₹900",
+      description: "Seamless, flexible enhancements for a lightweight, natural feel.",
+      duration: 75,
+      image: "url_to_image_of_soft_gel",
       isNew: false,
     },
     {
-      title: "Pedicure",
-      price: "₹1,500",
-      description: "Relaxing foot treatment with exfoliation and polish.",
-      duration: 45,
-      image: "url_to_image_of_pedicure",
-      isNew: false,
+      title: "Gum Gel Enhancements",
+      price: "₹950",
+      description: "Durable, sculpted extensions designed for ultimate resilience and elegance.",
+      duration: 90,
+      image: "url_to_image_of_gum_gel",
+      isNew: true,
     },
     {
-      title: "Colour Gloss Polish",
-      price: "₹1,000",
-      description: "Vibrant and glossy nail color application.",
-      duration: 30,
-      image: "url_to_image_of_colour_gloss_polish",
-      isNew: false,
-    },
-    {
-      title: "Polish Change",
-      price: "₹500",
-      description: "Quick change of nail polish color.",
-      duration: 15,
-      image: "url_to_image_of_polish_change",
+      title: "Gel Extensions",
+      price: "₹1200",
+      description: "Bespoke length and strength, crafted with precision.",
+      duration: 90,
+      image: "url_to_image_of_gel_extensions",
       isNew: false,
     },
   ];
@@ -69,7 +69,7 @@ const Services = () => {
             Premium Nail Treatments
           </span>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
-            Our Signature Nail Services
+            SHRINGAR.KAY🤍 Signature Nail Services
           </h1>
           <div className="w-24 h-1 bg-indigo-600 mx-auto mb-6 rounded-full"></div>
           <p className="max-w-2xl mx-auto text-base md:text-lg text-gray-600">
@@ -116,7 +116,7 @@ const Services = () => {
                   <div className="h-48 sm:h-56 overflow-hidden relative">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10"></div>
                     <img
-                      src={service.image}
+                      src={`/api/placeholder/800/600`}
                       alt={service.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -132,7 +132,7 @@ const Services = () => {
                         {service.title}
                       </h3>
                       <span className="text-indigo-600 font-semibold">
-                        ₹{service.price}
+                        {service.price}
                       </span>
                     </div>
                     <p className="text-gray-600 text-sm md:text-base mb-4">
@@ -160,7 +160,7 @@ const Services = () => {
           </h3>
           <p className="mb-6 max-w-2xl mx-auto text-indigo-100">
             Book your appointment today and indulge in our luxurious nail
-            services.
+            services at SHRINGAR.KAY🤍.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
             <button className="px-6 py-3 bg-white text-indigo-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-md">
