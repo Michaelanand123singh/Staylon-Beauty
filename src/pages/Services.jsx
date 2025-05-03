@@ -7,9 +7,7 @@ const Services = () => {
       title: "Gel Nails",
       price: "₹3,500",
       description: "Long-lasting gel polish for a flawless finish.",
-      duration: 60,
       image: "url_to_image_of_gel_nails",
-      isNew: false,
     },
     {
       title: "Shellac Nails for Hands",
