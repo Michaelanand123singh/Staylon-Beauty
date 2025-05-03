@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Link } from "react-router-dom";
 
 const HeroCarousel = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -13,52 +13,52 @@ const HeroCarousel = () => {
 
   const slides = [
     {
-      image: '/banner/gum-gel.jpg',
-      subtitle: 'Luxury Gel Nails',
-      title: 'Gel Nails',
-      description: 'A durable and glossy finish. ₹550',
-      ctaText: 'Book Gel Nails',
-      ctaLink: '/appointment?service=gel-nails'
+      image: "/banner/gum-gel.jpg",
+      subtitle: "Luxury Gel Nails",
+      title: "Gel Nails",
+      description: "A durable and glossy finish. ₹550",
+      ctaText: "Book Gel Nails",
+      ctaLink: "/appointment?service=gel-nails",
     },
     {
-      image: '/banner/soft-get.jpg',
-      subtitle: 'Strong Yet Elegant',
-      title: 'Structured Nails / BIAB',
-      description: 'Strengthened gel overlays for natural nails. ₹750',
-      ctaText: 'Book Structured Nails',
-      ctaLink: '/appointment?service=structured-nails'
+      image: "/banner/soft-get.jpg",
+      subtitle: "Strong Yet Elegant",
+      title: "Structured Nails / BIAB",
+      description: "Strengthened gel overlays for natural nails. ₹750",
+      ctaText: "Book Structured Nails",
+      ctaLink: "/appointment?service=structured-nails",
     },
     {
-      image: '/banner/temp-nail.jpg',
-      subtitle: 'Flexibility Meets Glam',
-      title: 'Gum Nails',
-      description: 'Flexible and long-lasting nail enhancements. ₹850',
-      ctaText: 'Book Gum Nails',
-      ctaLink: '/appointment?service=gum-nails'
+      image: "/banner/temp-nail.jpg",
+      subtitle: "Flexibility Meets Glam",
+      title: "Gum Nails",
+      description: "Flexible and long-lasting nail enhancements. ₹850",
+      ctaText: "Book Gum Nails",
+      ctaLink: "/appointment?service=gum-nails",
     },
     {
-      image: '/gallery/3.jpg',
-      subtitle: 'Instant Beauty',
-      title: 'Temporary Nails',
-      description: 'Pop-on nails for short-term glam. ₹900',
-      ctaText: 'Book Temporary Nails',
-      ctaLink: '/appointment?service=temporary-nails'
+      image: "/gallery/3.jpg",
+      subtitle: "Instant Beauty",
+      title: "Temporary Nails",
+      description: "Pop-on nails for short-term glam. ₹900",
+      ctaText: "Book Temporary Nails",
+      ctaLink: "/appointment?service=temporary-nails",
     },
     {
-      image: '/gallery/4.jpg',
-      subtitle: 'Elegant Extensions',
-      title: 'Gel Extensions',
-      description: 'Lightweight and elegant nail extensions. ₹1100',
-      ctaText: 'Book Gel Extensions',
-      ctaLink: '/appointment?service=gel-extensions'
+      image: "/gallery/4.jpg",
+      subtitle: "Elegant Extensions",
+      title: "Gel Extensions",
+      description: "Lightweight and elegant nail extensions. ₹1100",
+      ctaText: "Book Gel Extensions",
+      ctaLink: "/appointment?service=gel-extensions",
     },
     {
-      image: '/gallery/5.jpg',
-      subtitle: 'Soft & Natural',
-      title: 'Soft Gel Extensions',
-      description: 'Flexible and natural-looking extensions. ₹900',
-      ctaText: 'Book Soft Gel Extensions',
-      ctaLink: '/appointment?service=soft-gel-extensions'
+      image: "/gallery/5.jpg",
+      subtitle: "Soft & Natural",
+      title: "Soft Gel Extensions",
+      description: "Flexible and natural-looking extensions. ₹900",
+      ctaText: "Book Soft Gel Extensions",
+      ctaLink: "/appointment?service=soft-gel-extensions",
     },
   ];
 
@@ -66,8 +66,8 @@ const HeroCarousel = () => {
     <li
       className={`inline-block mx-2 mb-2 h-3 cursor-pointer transition-all duration-300 ${
         isSelected
-          ? 'w-12 bg-pink-500'
-          : 'w-3 bg-white bg-opacity-60 hover:bg-opacity-100'
+          ? "w-12 bg-pink-500"
+          : "w-3 bg-white bg-opacity-60 hover:bg-opacity-100"
       } rounded-full`}
       onClick={onClickHandler}
       onKeyDown={onClickHandler}
@@ -80,8 +80,8 @@ const HeroCarousel = () => {
 
   const getAnimationClass = (index) =>
     index === activeSlide && isLoaded
-      ? 'opacity-100 transform translate-y-0'
-      : 'opacity-0 transform translate-y-8';
+      ? "opacity-100 transform translate-y-0"
+      : "opacity-0 transform translate-y-8";
 
   return (
     <div className="relative">
@@ -101,12 +101,12 @@ const HeroCarousel = () => {
         swipeScrollTolerance={50}
       >
         {slides.map((slide, index) => (
-          <div key={index} className="h-screen relative overflow-hidden">
+          <div key={index} className="h-[80vh] relative overflow-hidden">
             {/* Background Image */}
             <div
               className="absolute inset-0 scale-105 transition-transform duration-10000 ease-linear"
               style={{
-                transform: activeSlide === index ? 'scale(1)' : 'scale(1.05)'
+                transform: activeSlide === index ? "scale(1)" : "scale(1.05)",
               }}
             >
               <img
@@ -123,29 +123,49 @@ const HeroCarousel = () => {
             <div className="absolute inset-0 flex items-center">
               <div className="container mx-auto px-6 lg:px-20">
                 <div className="max-w-xl text-white text-left">
-                  <div className={`transition-all duration-700 delay-300 ease-out ${getAnimationClass(index)}`}>
+                  <div
+                    className={`transition-all duration-700 delay-300 ease-out ${getAnimationClass(
+                      index
+                    )}`}
+                  >
                     <h6 className="text-sm md:text-base uppercase tracking-widest mb-3 inline-block bg-pink-600 bg-opacity-80 px-3 py-1 rounded">
                       {slide.subtitle}
                     </h6>
                   </div>
 
-                  <div className={`transition-all duration-700 delay-500 ease-out ${getAnimationClass(index)}`}>
+                  <div
+                    className={`transition-all duration-700 delay-500 ease-out ${getAnimationClass(
+                      index
+                    )}`}
+                  >
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 tracking-tight">
                       {slide.title}
                     </h1>
                   </div>
 
-                  <div className={`transition-all duration-700 delay-700 ease-out ${getAnimationClass(index)}`}>
+                  <div
+                    className={`transition-all duration-700 delay-700 ease-out ${getAnimationClass(
+                      index
+                    )}`}
+                  >
                     <div className="w-16 h-1 bg-pink-500 mb-6"></div>
                   </div>
 
-                  <div className={`transition-all duration-700 delay-900 ease-out ${getAnimationClass(index)}`}>
+                  <div
+                    className={`transition-all duration-700 delay-900 ease-out ${getAnimationClass(
+                      index
+                    )}`}
+                  >
                     <p className="text-base md:text-lg text-gray-200 mb-8 max-w-lg leading-relaxed">
                       {slide.description}
                     </p>
                   </div>
 
-                  <div className={`transition-all duration-700 delay-1100 ease-out ${getAnimationClass(index)}`}>
+                  <div
+                    className={`transition-all duration-700 delay-1100 ease-out ${getAnimationClass(
+                      index
+                    )}`}
+                  >
                     <Link
                       to={slide.ctaLink}
                       className="inline-block bg-pink-600 hover:bg-pink-700 text-white font-medium px-8 py-3 rounded-md transition duration-300 transform hover:translate-y-px hover:shadow-lg"
