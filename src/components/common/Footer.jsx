@@ -89,7 +89,7 @@ const Footer = () => {
                     />
                   </svg>
                 </div>
-                <p>+91 +91 90040 65531</p>
+                <p>+91 90040 65531</p>
               </div>
               <div className="flex items-center">
                 <div className="mr-3 text-pink-500">

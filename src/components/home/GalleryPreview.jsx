@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 const GalleryPreview = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   
-  // Replace these with your actual gallery images
+  // Nail gallery images
   const galleryImages = [
-    '/banner/carousel-1.jpg',
-    '/banner/carousel-1.jpg',
-    '/banner/carousel-1.jpg',
-    '/banner/carousel-1.jpg',
-    '/banner/carousel-1.jpg',
-    '/banner/carousel-1.jpg'
+    '/banner/soft-get.jpg',
+    '/gallery/3.jpg',
+    '/gallery/14.jpg',
+    '/gallery/2.jpg',
+    '/banner/temp-nail.jpg',
+    '/gallery/10.jpg'
   ];
 
-  // Gallery categories for filtering (optional feature)
-  const categories = ['All', 'Hair', 'Makeup', 'Spa', 'Nails'];
+  // Nail categories for filtering
+  const categories = ['All', 'Gel Polish', 'Extensions', 'Nail Art', 'BIAB'];
   const [activeCategory, setActiveCategory] = useState('All');
 
   return (
@@ -26,14 +26,14 @@ const GalleryPreview = () => {
             Our Portfolio
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Beauty Transformations
+            SHRINGAR.KAY<span className="text-rose-500">🤍</span> Nail Transformations
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Browse our gallery of stunning transformations and beauty work that showcases our expertise and commitment to excellence.
+            Browse our gallery of stunning nail transformations that showcase our artistry, precision, and commitment to nail perfection.
           </p>
         </div>
 
-        {/* Optional Category Filters */}
+        {/* Nail Category Filters */}
         <div className="flex flex-wrap justify-center gap-2 mb-10">
           {categories.map((category, index) => (
             <button
@@ -61,8 +61,8 @@ const GalleryPreview = () => {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <img 
-                src={image}
-                alt={`Beauty transformation ${index + 1}`}
+                src={image || `/api/placeholder/400/300?text=Nail Art ${index + 1}`}
+                alt={`Nail transformation ${index + 1}`}
                 className={`w-full ${index === 0 ? 'h-96 sm:h-full' : 'h-64 sm:h-72'} object-cover transition-transform duration-700 ${
                   hoveredIndex === index ? 'scale-110' : 'scale-100'
                 }`}
@@ -75,12 +75,14 @@ const GalleryPreview = () => {
                 }`}
               >
                 <span className="text-white text-xs font-medium uppercase tracking-wider mb-1">
-                  {index % 4 === 0 ? 'Hair Styling' : 
-                   index % 4 === 1 ? 'Facial Treatment' : 
-                   index % 4 === 2 ? 'Makeup' : 'Nail Art'}
+                  {index % 6 === 0 ? 'Nail Art Design' : 
+                   index % 6 === 1 ? 'Gel Extensions' : 
+                   index % 6 === 2 ? 'Soft Gel Extensions' : 
+                   index % 6 === 3 ? 'Structured Nails (BIAB)' :
+                   index % 6 === 4 ? 'Gum Gel Enhancements' : 'Premium Nail Art'}
                 </span>
                 <h3 className="text-white text-lg font-bold mb-2">
-                  {index % 3 === 0 ? 'Complete Transformation' : 
+                  {index % 3 === 0 ? 'Signature Design' : 
                    index % 3 === 1 ? 'Before & After' : 'Premium Service'}
                 </h3>
                 <div className="flex items-center text-rose-300">
@@ -98,7 +100,7 @@ const GalleryPreview = () => {
         <div className="text-center">
           <Link to="/gallery">
             <button className="inline-flex items-center bg-rose-500 hover:bg-rose-600 text-white font-medium py-3 px-8 rounded-full transition-colors duration-300 shadow-lg hover:shadow-xl">
-              View Complete Gallery
+              View Complete Nail Gallery
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>

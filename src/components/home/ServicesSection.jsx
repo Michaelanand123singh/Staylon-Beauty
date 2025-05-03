@@ -2,71 +2,64 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
 
 const ServicesSection = () => {
-  const [activeCategory, setActiveCategory] = useState('Beauty Services');
+  const [activeCategory, setActiveCategory] = useState('Signature Nails');
   
   const serviceCategories = [
     {
-      title: 'Beauty Services',
+      title: 'Signature Nails',
       services: [
         {
-          title: 'Skin Care Treatment',
-          description: 'Experience our premier skincare treatments, tailored to rejuvenate and enhance your natural beauty. Our expert estheticians use top-quality products to ensure your skin looks and feels its best.',
-          image: '/banner/carousel-1.jpg',
+          title: 'Gel Polish Application',
+          description: 'A flawless coat of high-gloss color, perfect for every occasion. Our premium gel polish provides long-lasting shine and durability without chipping.',
+          image: '/banner/nails-1.jpg',
+          price: '₹550'
         },
         {
-          title: 'Beauty Treatments',
-          description: 'Elevate your beauty routine with our comprehensive treatment services. Our personalized approach ensures you achieve a radiant and refreshed look with advanced skincare solutions',
-          image: '/banner/carousel-1.jpg',
+          title: 'Structured Manicure (BIAB)',
+          description: 'Strengthen and enhance your natural nails with our premium builder base. This innovative treatment adds structure while allowing natural growth.',
+          image: '/banner/nails-2.jpg',
+          price: '₹750'
         },
         {
-          title: 'Body Massage',
-          description: 'Relax and rejuvenate with our soothing body massage services, tailored to relieve stress and tension. Our skilled therapists ensure a blissful experience, leaving you refreshed and revitalized.',
-          image: '/banner/carousel-1.jpg',
+          title: 'Temporary Nails',
+          description: 'The ideal choice for a short-term, stunning transformation. Perfect for special events when you need a quick but elegant nail solution.',
+          image: '/banner/nails-3.jpg',
+          price: '₹800'
         },
         {
-          title: 'Manicure & Pedicure',
-          description: 'Treat your hands and feet to our luxurious nail care services',
-          image: '/banner/carousel-1.jpg',
-        },
-        {
-          title: 'Facial Bleach',
-          description: 'Refresh your skin with our customized facials, designed to address your unique skincare needs. Our experts use premium products to leave your complexion radiant and refreshed.',
-          image: '/banner/carousel-1.jpg',
-        },
-        {
-          title: 'Waxing',
-          description: 'Achieve smooth, hair-free skin with our professional waxing services. Our gentle and effective techniques ensure a comfortable experience and long-lasting results.',
-          image: '/banner/carousel-1.jpg',
+          title: 'Soft Gel Extensions',
+          description: 'Seamless, flexible enhancements for a lightweight, natural feel. Our soft gel extensions move with your natural nails for comfort and durability.',
+          image: '/banner/nails-4.jpg',
+          price: '₹900'
         },
       ]
     },
     {
-      title: 'Hair Services',
+      title: 'Premium Nails',
       services: [
         {
-          title: 'Hair Straightening',
-          description: 'Transform your hair with our professional hair straightening services, delivering sleek, smooth, and manageable results. Our advanced techniques ensure long-lasting straightness while maintaining hair health and shine.',
-          image: '/banner/carousel-1.jpg',
+          title: 'Gum Gel Enhancements',
+          description: 'Durable, sculpted extensions designed for ultimate resilience and elegance. Perfect for those who need extra strength without sacrificing style.',
+          image: '/banner/nails-5.jpg',
+          price: '₹950'
         },
         {
-          title: 'Hair Highlights',
-          description: 'Enhance your look with our expert hair highlights, adding dimension and vibrancy to your style. Our skilled colorists use premium products to create natural-looking, radiant highlights tailored to your preferences.',
-          image: '/banner/carousel-1.jpg',
+          title: 'Gel Extensions',
+          description: 'Bespoke length and strength, crafted with precision. Our premium gel extensions offer the perfect canvas for creative designs and luxurious finishes.',
+          image: '/banner/nails-6.jpg',
+          price: '₹1200'
         },
         {
-          title: 'Haircuts & Styling',
-          description: 'Refresh your style with our precision haircuts, tailored to enhance your features and suit your lifestyle. Our experienced stylists ensure a personalized cut that leaves you looking and feeling your best.',
-          image: '/banner/carousel-1.jpg',
+          title: 'Nail Art Design',
+          description: 'Express your personality with our custom nail art designs. From minimalist patterns to elaborate artwork, our skilled technicians create stunning visual effects.',
+          image: '/banner/nails-7.jpg',
+          price: 'From ₹450'
         },
         {
-          title: 'Hair Colouring',
-          description: 'Transform your look with our expert hair coloring services, offering vibrant, long-lasting hues. Our skilled colorists use top-quality products to achieve stunning, personalized results that enhance your natural beauty.',
-          image: '/banner/carousel-1.jpg',
-        },
-        {
-          title: 'Hair Spa',
-          description: 'Revitalize your hair with our luxurious hair spa treatments, designed to nourish and rejuvenate. Enjoy deep conditioning that restores shine, softness, and overall hair health.',
-          image: '/banner/carousel-1.jpg',
+          title: 'Nail Repair',
+          description: 'Restore damaged nails with our specialized repair techniques. Our experts can fix breaks, splits, and chips to maintain your beautiful manicure.',
+          image: '/banner/nails-8.jpg',
+          price: 'From ₹350'
         },
       ]
     }
@@ -85,9 +78,11 @@ const ServicesSection = () => {
           <span className="inline-block bg-rose-100 text-rose-600 px-4 py-1 rounded-full text-sm font-medium mb-4">
             Our Services
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Premium Beauty Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            SHRINGAR.KAY<span className="text-rose-500">🤍</span> Signature Nail Services
+          </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Discover our range of professional beauty and hair services designed to enhance your natural beauty and boost your confidence.
+            Experience luxury at your fingertips with our premium nail services, designed to enhance your natural beauty with precision and care.
           </p>
         </div>
         
@@ -126,6 +121,9 @@ const ServicesSection = () => {
               <div className="p-6">
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-lg font-bold text-gray-800">{service.title}</h3>
+                  <span className="bg-rose-100 text-rose-600 px-2 py-1 rounded-full text-xs font-medium">
+                    {service.price}
+                  </span>
                 </div>
                 <p className="text-gray-600 text-sm mb-4 line-clamp-3">{service.description}</p>
                 <Link to="/appointment" className="block w-full">
@@ -142,7 +140,7 @@ const ServicesSection = () => {
         <div className="text-center mt-12">
           <Link to="/services">
             <button className="inline-flex items-center bg-transparent border-2 border-rose-500 text-rose-500 hover:bg-rose-500 hover:text-white font-medium py-3 px-8 rounded-full transition-colors duration-300">
-              View All Services
+              View All Nail Services
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                 <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
